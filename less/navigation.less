@@ -1,5 +1,9 @@
 // Navigation Styles here
 .main-nav {
+  @media @mobile {
+    width: 100%;
+  }
+
   ul {
     padding: 0;
     margin-bottom: 0;
@@ -8,6 +12,7 @@
 
     @media @mobile {
       .flex-box(row, space-between, base);
+      width: 100%;
     }
 
     li {
@@ -15,6 +20,11 @@
         padding: @nav-link-padding;
         text-decoration: none;
         color: @shark;
+        font-size: 1.5rem;
+
+        @media @mobile {
+          padding: 0;
+        }
 
         &:hover,
         &:focus {
@@ -23,12 +33,14 @@
         }
       }
 
-      &:nth-child(even) {
-        margin-left: @nav-link-margin;
+      margin-left: @nav-link-margin;
 
-        @media @mobile {
-          margin-left: @nav-link-margin - 1.5;
-        }
+      @media @mobile {
+        margin-left: .5em;
+      }
+
+      &:first-child {
+        margin-left: 0;
       }
     }
   }
