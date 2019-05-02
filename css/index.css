@@ -1,3 +1,6 @@
+/*
+ * Media queries breakpoints
+ */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -177,6 +180,14 @@ img {
   align-items: base;
   justify-content: space-between;
 }
+@media (max-width: 479px) {
+  .main-nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: base;
+    justify-content: space-between;
+  }
+}
 .main-nav ul li a {
   padding: 1rem;
   text-decoration: none;
@@ -206,19 +217,42 @@ img {
   padding: 3rem 0;
   border-bottom: 2px dashed #C0C0C0;
 }
+@media (max-width: 479px) {
+  .page-header {
+    padding: 1rem 0;
+  }
+}
 .page-header .page-header-content {
   display: flex;
   flex-direction: row;
   align-items: base;
   justify-content: space-between;
 }
+@media (max-width: 479px) {
+  .page-header .page-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .page-header .page-header-content > a {
   text-decoration: none;
   color: #212529;
 }
+@media (max-width: 479px) {
+  .page-header .page-header-content > a {
+    margin-bottom: 1rem;
+  }
+}
 .page-header .page-header-content > a:hover,
 .page-header .page-header-content > a:focus {
   color: #17A2B8;
+}
+@media (max-width: 479px) {
+  .home {
+    padding: 0 2rem;
+  }
 }
 .home .home-banner {
   background: url('../img/fun-bus.jpg') no-repeat center / cover;
@@ -235,13 +269,33 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 479px) {
+  .home .content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 479px) {
+  .home .content-section .text-content {
+    width: 100%;
+    padding: 2rem 0;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 479px) {
+  .home .content-section .img-content {
+    width: 100%;
+    padding: 2rem 0;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -262,6 +316,11 @@ img {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 479px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -271,39 +330,53 @@ img {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 479px) {
+  .home .content-pick {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 479px) {
+  .home .content-pick .destination {
+    width: 100%;
+  }
 }
 .home .btn {
   padding: 0.5em 0.5em;
   font-size: 2rem;
   line-height: 1.5;
-  border-radius: 5px;
+  border-radius: 20px;
   color: #FFFFFF;
   background-color: #17A2B8;
-  border-color: #17A2B8;
+  border-color: #C0C0C0;
   text-align: center;
   cursor: pointer;
-  border: 1px solid #17A2B8;
+  border: 1px solid #C0C0C0;
 }
 .home .btn:focus,
 .home .btn.focus {
   color: #FFFFFF;
   background-color: #117a8b;
-  border-color: #093e47;
+  border-color: #808080;
 }
 .home .btn:hover {
   color: #FFFFFF;
   background-color: #117a8b;
-  border-color: #107282;
+  border-color: #a1a1a1;
 }
 .home .btn:active,
 .home .btn.active {
   color: #FFFFFF;
   background-color: #117a8b;
   background-image: none;
-  border-color: #107282;
+  border-color: #a1a1a1;
 }
 .home .btn:active:hover,
 .home .btn.active:hover,
@@ -313,5 +386,5 @@ img {
 .home .btn.active.focus {
   color: #FFFFFF;
   background-color: #0d5e6b;
-  border-color: #093e47;
+  border-color: #808080;
 }

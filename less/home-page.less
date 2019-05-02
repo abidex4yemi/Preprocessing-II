@@ -2,15 +2,26 @@
 .page-header {
   font-size: 1.7rem;
   padding: 3rem 0;
-
   border-bottom: 2px dashed @navigation-border;
+
+  @media (max-width: @small-screen-max-max) {
+    padding: 1rem 0;
+  }
 
   .page-header-content {
     .flex-box(row, space-between, base);
 
+    @media (max-width: @small-screen-max-max) {
+      .flex-box(column, center, center);
+    }
+
     >a {
       text-decoration: none;
       color: @shark;
+
+      @media (max-width: @small-screen-max-max) {
+        margin-bottom: 1rem;
+      }
 
       &:hover,
       &:focus {
@@ -22,6 +33,10 @@
 }
 
 .home {
+
+  @media (max-width: @small-screen-max-max) {
+    padding: 0 2rem;
+  }
 
   .home-banner {
     background: url('../img/fun-bus.jpg') no-repeat center/cover;
@@ -40,16 +55,28 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-
+    @media (max-width: @small-screen-max-max) {
+      .flex-box(column, center, center);
+    }
 
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media (max-width: @small-screen-max-max) {
+        width: 100%;
+        padding: 2rem 0;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media (max-width: @small-screen-max-max) {
+        width: 100%;
+        padding: 2rem 0;
+      }
 
       img {
         border-radius: 10px;
@@ -76,6 +103,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media (max-width: @small-screen-max-max) {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -87,16 +118,23 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: @small-screen-max-max) {
+      .flex-box(column, center, center);
+      padding: 2rem 0;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media (max-width: @small-screen-max-max) {
+        width: 100%;
+      }
     }
   }
 
   .btn {
-    .button-size(.5em, .5em, 2rem, 1.5, 5px);
-    .button-style(@white, @button-bg, @button-bg);
+    .button-size(.5em, .5em, 2rem, 1.5, 20px);
+    .button-style(@white, @button-bg, @silver);
   }
 }
-
-// home

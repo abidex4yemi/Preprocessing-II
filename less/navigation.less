@@ -1,10 +1,14 @@
 // Navigation Styles here
 .main-nav {
   ul {
-    padding: 0; // Override default ul/ol
+    padding: 0;
     margin-bottom: 0;
     list-style: none;
     .flex-box(row, space-between, base);
+
+    @media (max-width: @small-screen-max-max) {
+      .flex-box(row, space-between, base);
+    }
 
     li {
       a {
