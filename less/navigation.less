@@ -6,7 +6,7 @@
     list-style: none;
     .flex-box(row, space-between, base);
 
-    @media (max-width: @small-screen-max-max) {
+    @media @mobile {
       .flex-box(row, space-between, base);
     }
 
@@ -25,6 +25,10 @@
 
       &:nth-child(even) {
         margin-left: @nav-link-margin;
+
+        @media @mobile {
+          margin-left: @nav-link-margin - 1.5;
+        }
       }
     }
   }
