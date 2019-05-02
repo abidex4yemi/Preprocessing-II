@@ -1,1 +1,27 @@
 // Navigation Styles here
+.main-nav {
+  ul {
+    padding: 0; // Override default ul/ol
+    margin-bottom: 0;
+    list-style: none;
+    .flex-box(row, space-between, base);
+
+    li {
+      a {
+        padding: @nav-link-padding;
+        text-decoration: none;
+        color: @shark;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: @eastern-blue;
+        }
+      }
+
+      &:nth-child(even) {
+        margin-left: @nav-link-margin;
+      }
+    }
+  }
+}
